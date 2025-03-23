@@ -14,7 +14,7 @@ const Login: React.FC = () => {
   const loginAcc = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5246/api/Auth/login", {
+      const response = await axios.post("https://902f-2804-14d-a281-85af-2973-5de4-b54-1f25.ngrok-free.app/api/Auth/login", {
         email,
         password,
       });

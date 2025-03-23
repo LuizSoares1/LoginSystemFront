@@ -34,7 +34,7 @@ const UsersList: React.FC = () => {
 
   const deleteUser = async (id: number) => {
     try {
-      await axios.delete(`http://localhost:5246/api/Auth/users/${id}`, {
+      await axios.delete(`https://902f-2804-14d-a281-85af-2973-5de4-b54-1f25.ngrok-free.app/api/Auth/users/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(users.filter((user) => user.id !== id));
