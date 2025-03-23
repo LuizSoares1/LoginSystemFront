@@ -21,8 +21,11 @@ const UsersList: React.FC = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:5246/api/Auth/user", {
-          headers: { Authorization: `Bearer ${token}` },
+        const response = await axios.get("https://902f-2804-14d-a281-85af-2973-5de4-b54-1f25.ngrok-free.app/api/Auth/user", {
+          headers: { Authorization: `Bearer ${token}`,
+          "ngrok-skip-browser-warning": "true",
+          "Accept": "application/json",
+        },
         });
         setUsers(response.data);
       } catch {
