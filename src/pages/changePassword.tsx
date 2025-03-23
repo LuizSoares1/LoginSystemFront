@@ -21,7 +21,7 @@ const ChangePassword: React.FC = () => {
     }
     try {
       await axios.post(
-        "http://902f-2804-14d-a281-85af-2973-5de4-b54-1f25.ngrok-free.app/api/Auth/change-password",
+        "https://902f-2804-14d-a281-85af-2973-5de4-b54-1f25.ngrok-free.app/api/Auth/change-password",
         {
           currentPassword,
           newPassword,
