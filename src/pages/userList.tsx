@@ -18,6 +18,8 @@ const UsersList: React.FC = () => {
   const { token } = useAuth();
   const navigate = useNavigate();
 
+  // Função para carregar a lista de usuários, algumas propriedades na header para ignorar as warnings do ngrok a função de excluir um usuário.
+
   useEffect(() => {
     const fetchUsers = async () => {
       try {

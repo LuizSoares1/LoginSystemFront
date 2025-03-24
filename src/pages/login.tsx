@@ -11,6 +11,8 @@ const Login: React.FC = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
 
+  // Função para fazer login, com decodificador de token e redirecionamento.
+
   const loginAcc = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -19,7 +21,6 @@ const Login: React.FC = () => {
         password,
       });
       const { token } = response.data;
-      // Decodifica o token para pegar o role (simples, sem biblioteca externa)
       const payload = JSON.parse(atob(token.split(".")[1]));
       const role = payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
       login(token, role);

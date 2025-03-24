@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../App";
 import "../styles/home.sass";
 
+// Página inicial, com botões para sair, trocar senha e acessar a lista de usuários.
+// O botão de lista de usuários só é exibido para usuários com a role "Admin".
+
 const Home: React.FC = () => {
   const { logout, userRole } = useAuth();
   const navigate = useNavigate();

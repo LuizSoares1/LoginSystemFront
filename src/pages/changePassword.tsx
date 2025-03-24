@@ -13,6 +13,8 @@ const ChangePassword: React.FC = () => {
   const { token } = useAuth();
   const navigate = useNavigate();
 
+  // Função para alterar a senha, com validação de senha atual e confirmação de nova senha.
+
   const changePassword = async (e: React.FormEvent) => {
     e.preventDefault();
     if (newPassword !== confirmNewPassword) {

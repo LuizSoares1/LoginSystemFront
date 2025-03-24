@@ -13,6 +13,8 @@ const Register: React.FC = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+// Função para registrar um novo usuário
+
   const registerAcc = async (e: React.FormEvent) => {
     e.preventDefault();
     if (password !== confirmPassword) {
@@ -27,7 +29,7 @@ const Register: React.FC = () => {
         cpf,
         role: role === "admin" ? "Admin" : "User",
       });
-      setError(""); // Limpa erro em caso de sucesso
+      setError("");
       navigate("/login");
     } catch (err) {
       console.error(err); // Log para depuração
