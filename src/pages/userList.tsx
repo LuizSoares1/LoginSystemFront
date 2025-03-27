@@ -23,7 +23,7 @@ const UsersList: React.FC = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("https://902f-2804-14d-a281-85af-2973-5de4-b54-1f25.ngrok-free.app/api/Auth/user", {
+        const response = await axios.get("https://bf64-2804-14d-a281-85af-756b-4a8c-8d13-1368.ngrok-free.app/api/Auth/user", {
           headers: { Authorization: `Bearer ${token}`,
           "ngrok-skip-browser-warning": "true",
           "Accept": "application/json",
@@ -39,7 +39,7 @@ const UsersList: React.FC = () => {
 
   const deleteUser = async (id: number) => {
     try {
-      await axios.delete(`https://902f-2804-14d-a281-85af-2973-5de4-b54-1f25.ngrok-free.app/api/Auth/users/${id}`, {
+      await axios.delete(`https://bf64-2804-14d-a281-85af-756b-4a8c-8d13-1368.ngrok-free.app/api/Auth/users/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(users.filter((user) => user.id !== id));
