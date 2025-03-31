@@ -22,7 +22,7 @@ const Register: React.FC = () => {
       return;
     }
     try {
-      await axios.post("https://bf64-2804-14d-a281-85af-756b-4a8c-8d13-1368.ngrok-free.app/api/Auth/register", {
+      await axios.post("https://288c-2804-14d-a281-85af-89c7-da49-a7f8-a330.ngrok-free.app/api/Auth/register", {
         name,
         email,
         password,
